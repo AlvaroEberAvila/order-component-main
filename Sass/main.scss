@@ -1,0 +1,191 @@
+@import "variable";
+
+body {
+  margin-top: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 400px;
+  margin: 3rem auto;
+  background-image: url(/img/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 22rem;
+}
+
+.background {
+  margin-top: -4px;
+  background: $very-pale-blue;
+  text-align: center;
+  width: 22rem;
+  padding: 1rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  & p:first-child {
+    padding-top: 10px;
+    color: $dark-blue;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+  }
+  & p:nth-child(2) {
+    padding-top: 14px;
+    color: $desaturated-blue;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  & p:nth-child(3) {
+    color: $desaturated-blue;
+    padding: 5px;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  & p:nth-child(4) {
+    color: $desaturated-blue;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+
+.img-plan-pago {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+
+  & img {
+    margin-left: 1rem;
+  }
+
+  .anual-plan {
+    right: 10px;
+    margin-right: 2rem;
+    color: $dark-blue;
+    font-weight: 900;
+
+    & p {
+      color: $desaturated-blue;
+      font-weight: 500;
+      margin-top: -5px;
+    }
+  }
+
+  & a {
+    align-self: center;
+    margin-right: 1.1rem;
+    color: $bright-blue;
+    font-weight: 500;
+  }
+}
+
+.form {
+  margin-top: 35px;
+
+  form {
+    button:first-child {
+      background: $bright-blue;
+      color: $pale-blue;
+      font-weight: 700;
+      padding: 0.7rem 4.5rem;
+      border: none;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+    }
+
+    button:last-child {
+      color: $desaturated-blue;
+      font-weight: 700;
+      border: none;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .hero img {
+    width: 30rem;
+  }
+
+  .background {
+    width: 30rem;
+    & p:first-child {
+      padding-top: 2rem;
+      font-size: 30px;
+    }
+    & p:nth-child(2) {
+      padding-top: 1.7rem;
+      font-size: 22px;
+    }
+    & p:nth-child(3) {
+      padding: 0.7rem;
+      font-size: 22px;
+    }
+    & p:nth-child(4) {
+      font-size: 22px;
+    }
+  }
+
+  .img-plan-pago {
+    margin-top: 30px;
+
+    img {
+      width: 75px;
+    }
+
+    .anual-plan {
+      font-size: 26px;
+
+      & .pago {
+        margin-top: -1px;
+        font-size: 22px;
+      }
+    }
+
+    a {
+      font-size: 25px;
+
+      &:hover {
+        color: $desaturated-blue;
+      }
+    }
+  }
+
+  form {
+    button:first-child {
+      width: 400px;
+      padding: 19px;
+      font-size: 20px;
+
+      &:hover {
+        background: $desaturated-blue;
+      }
+    }
+
+    button:last-child {
+      padding-top: 10px;
+      font-size: 20px;
+
+      &:hover {
+        color: $dark-blue;
+      }
+    }
+  }
+}
